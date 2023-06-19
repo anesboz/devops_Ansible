@@ -1,0 +1,13 @@
+---
+- name: Run database
+  docker_container:
+    name: database
+    image: anesboz/db
+    env:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "mydb"
+    networks:
+      - name: app-network
+    volumes:
+      - "shared-docker:/path/in/container"

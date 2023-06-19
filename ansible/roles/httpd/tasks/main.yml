@@ -1,0 +1,9 @@
+---
+- name: Run httpd
+  docker_container:
+    name: httpd
+    image: anesboz/http
+    networks:
+      - name: app-network
+    published_ports:
+      - "80:80"

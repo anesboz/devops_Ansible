@@ -1,0 +1,7 @@
+---
+- name: Create network
+  docker_network:
+    name: app-network
+- name: Create volume
+  docker_volume:
+    name: shared-docker
